@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contattaci — Emvas STP</title>
+<meta name="description" content="Emvas STP — Piazza dell'Emporio 11A, Roma. Tel. 06 69411430. Il primo colloquio è gratuito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/styles.css">
+<link rel="stylesheet" href="./assets/pages.css">
+</head>
+<body>
+
+<div id="site-header-mount"></div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Contattaci</div>
+  <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;">Richiedi un appuntamento</div>
+  <h1>Parliamone<br>senza <em>impegno.</em></h1>
+  <p class="lede">Compila il form e sarai ricontattato al più presto. Oppure chiamaci allo 06 69411430 dal lunedì al venerdì, dalle 09:00 alle 18:00. Il primo colloquio è sempre gratuito.</p>
+</section>
+
+<section class="contact-bg">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-num">Dove siamo</div>
+      <h2 style="margin-top: 18px;">Nel cuore di <em>Roma.</em></h2>
+      <p>Siamo in Piazza dell'Emporio, a pochi passi dal Tevere e dal quartiere Testaccio — in un edificio storico che ospita i nostri uffici.</p>
+
+      <div class="contact-details">
+        <div><span class="label">Sede legale</span><span class="value">Piazza dell'Emporio 11A<br>00153 Roma (RM), Italia</span></div>
+        <div><span class="label">Telefono</span><span class="value"><a href="tel:+390669411430">06 69411430</a></span></div>
+        <div><span class="label">Orari</span><span class="value">Lunedì — Venerdì<br>09:00 → 18:00</span></div>
+        <div><span class="label">Ragione sociale</span><span class="value">Emvas STP S.r.l.</span></div>
+        <div><span class="label">LinkedIn</span><span class="value"><a href="https://www.linkedin.com/company/emvas-stp" target="_blank" rel="noopener">@emvas-stp ↗</a></span></div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <div class="form-eyebrow">— Modulo di contatto</div>
+      <div class="form-title">Ti <em>ricontattiamo</em><br>al più presto.</div>
+
+      <form onsubmit="event.preventDefault(); this.reset(); alert('Grazie! La richiesta è stata inviata.');">
+        <div class="form-row">
+          <label>Nome &amp; cognome</label>
+          <input type="text" required placeholder="Mario Rossi">
+        </div>
+        <div class="form-row">
+          <label>Mi piacerebbe parlare di</label>
+          <select required>
+            <option value="">Seleziona un'area —</option>
+            <option>Fiscale</option>
+            <option>Lavoro</option>
+            <option>Legale</option>
+            <option>Start-up innovative</option>
+            <option>Internazionalizzazione</option>
+            <option>Marchi e brevetti</option>
+            <option>Terzo settore</option>
+            <option>Passaggio generazionale</option>
+            <option>Altro</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" required placeholder="mario@azienda.it">
+        </div>
+        <div class="form-row">
+          <label>Telefono <span style="text-transform: none; opacity: 0.6;">(opzionale)</span></label>
+          <input type="tel" placeholder="+39 …">
+        </div>
+        <div class="form-row">
+          <label>Messaggio</label>
+          <textarea rows="3" placeholder="Breve descrizione della richiesta…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Invia richiesta →</button>
+        <p class="form-note">I tuoi dati saranno trattati secondo la nostra Privacy Policy.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-mount"></div>
+<script src="./assets/chrome.js"></script>
+<script>buildChrome({ base: '.' });</script>
+</body>
+</html>
