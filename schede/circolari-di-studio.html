@@ -10,6 +10,79 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="stylesheet" href="../assets/pages.css">
+<style>
+  .circ-archive { max-width: 1200px; margin: 0 auto; padding: 40px; }
+  .circ-year {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ink);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .circ-year:first-child { margin-top: 0; }
+  .circ-year-label {
+    position: sticky;
+    top: 120px;
+    font-family: var(--serif);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--accent);
+    font-style: italic;
+  }
+  .circ-list { display: flex; flex-direction: column; }
+  .circ-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 28px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+    transition: padding 0.3s, color 0.3s;
+  }
+  .circ-item:hover { padding-left: 12px; color: var(--accent); }
+  .circ-item:hover .circ-arrow { color: var(--accent); transform: translateX(6px); }
+  .circ-ref {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .circ-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+  .circ-title em { font-style: italic; color: var(--accent); }
+  .circ-arrow {
+    font-family: var(--mono);
+    font-size: 16px;
+    color: var(--muted);
+    transition: transform 0.3s, color 0.3s;
+  }
+  .circ-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  @media (max-width: 800px) {
+    .circ-archive { padding: 24px; }
+    .circ-year { grid-template-columns: 1fr; gap: 16px; }
+    .circ-year-label { position: static; font-size: 48px; }
+    .circ-item { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+    .circ-arrow { display: none; }
+  }
+</style>
 </head>
 <body>
 
@@ -22,16 +95,311 @@
     Circolari di studio
   </div>
   <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;">Aggiornamenti</div>
-  <h1>Circolari di studio</h1>
-  <p class="lede">Le nostre circolari periodiche: scadenze, adempimenti, interpretazioni ufficiali, novità di prassi.</p>
+  <h1>Circolari <em>di studio</em></h1>
+  <p class="lede">Le nostre circolari periodiche: scadenze, adempimenti, interpretazioni ufficiali, novità di prassi. L'archivio raccoglie gli articoli pubblicati su <strong>emvas.it</strong>.</p>
 </section>
 
 <section class="section">
-  <div style="border: 1px dashed var(--rule); padding: 80px 40px; text-align: center; background: var(--paper-deep);">
-    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;">Archivio in aggiornamento</div>
-    <h2 style="font-size: clamp(30px, 3.5vw, 48px); margin-bottom: 18px;">Gli articoli di questa sezione<br>saranno pubblicati <em>a breve.</em></h2>
-    <p style="color: var(--muted); max-width: 60ch; margin: 0 auto 32px;">Questa pagina raccoglierà gli articoli appartenenti alla categoria <strong>Circolari di studio</strong>. Nel frattempo, puoi iscriverti alla newsletter per ricevere le nostre circolari di studio.</p>
-    <a href="../contattaci.html" class="cta-btn" style="display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none;">Contattaci per approfondire →</a>
+  <div class="circ-archive">
+
+    <div class="circ-year">
+      <div class="circ-year-label">2025</div>
+      <div class="circ-list">
+        <div class="circ-note">Aggiornamenti fiscali e normativi</div>
+
+        <a class="circ-item" href="https://www.emvas.it/dl-30-6-2025-n-95-c-d-decreto-omnibus/" target="_blank" rel="noopener">
+          <span class="circ-ref">DL 30.06.2025</span>
+          <span class="circ-title">DL 30.6.2025 n. 95 — Decreto <em>"Omnibus"</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/disposizioni-urgenti-in-materia-fiscale-dl-17-6-2025-n-84/" target="_blank" rel="noopener">
+          <span class="circ-ref">DL 17.06.2025</span>
+          <span class="circ-title">Disposizioni urgenti in materia fiscale (DL 17.6.2025 n. 84)</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/detrazione-irpef-per-le-spese-di-frequenza-delle-universita-non-statali-3/" target="_blank" rel="noopener">
+          <span class="circ-ref">2025</span>
+          <span class="circ-title">Detrazione IRPEF per le spese di frequenza delle <em>università non statali</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/certificazione-unica-2025/" target="_blank" rel="noopener">
+          <span class="circ-ref">2025</span>
+          <span class="circ-title">Certificazione Unica <em>2025</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/richiesta-documentazione-per-i-modelli-dichiarativi-2025/" target="_blank" rel="noopener">
+          <span class="circ-ref">2025</span>
+          <span class="circ-title">Richiesta documentazione per i <em>modelli dichiarativi 2025</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/concordato-preventivo-per-il-biennio-2025-2026/" target="_blank" rel="noopener">
+          <span class="circ-ref">2025-2026</span>
+          <span class="circ-title">Concordato preventivo per il <em>biennio 2025-2026</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2024</div>
+      <div class="circ-list">
+        <div class="circ-note">Aggiornamenti fiscali e normativi</div>
+
+        <a class="circ-item" href="https://www.emvas.it/dl-27-12-2024-n-202-c-d-milleproroghe/" target="_blank" rel="noopener">
+          <span class="circ-ref">DL 27.12.2024</span>
+          <span class="circ-title">DL 27.12.2024 n. 202 — Decreto <em>"Milleproroghe"</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/l-13-12-2024-n-203-c-d-collegato-lavoro/" target="_blank" rel="noopener">
+          <span class="circ-ref">L. 13.12.2024</span>
+          <span class="circ-title">L. 13.12.2024 n. 203 — <em>"Collegato Lavoro"</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/affrancamento-straordinario-delle-riserve-in-sospensione-dimposta-art-14-del-dlgs-13-12-2024-n-192/" target="_blank" rel="noopener">
+          <span class="circ-ref">D.Lgs. 192/2024</span>
+          <span class="circ-title">Affrancamento straordinario delle riserve in <em>sospensione d'imposta</em> (art. 14 D.Lgs. 13.12.2024 n. 192)</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/detrazione-irpef-per-le-spese-di-frequenza-delle-universita-non-statali-2/" target="_blank" rel="noopener">
+          <span class="circ-ref">2024</span>
+          <span class="circ-title">Detrazione IRPEF per le spese di frequenza delle <em>università non statali</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/concordato-preventivo-biennale-e-regime-del-ravvedimento/" target="_blank" rel="noopener">
+          <span class="circ-ref">2024</span>
+          <span class="circ-title">Concordato preventivo biennale e <em>regime del ravvedimento</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/certificazione-unica-2024/" target="_blank" rel="noopener">
+          <span class="circ-ref">2024</span>
+          <span class="circ-title">Certificazione Unica <em>2024</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/proroga-del-termine-di-versamento-del-secondo-acconto-irpef-e-relative-imposte-sostitutive-2/" target="_blank" rel="noopener">
+          <span class="circ-ref">2024</span>
+          <span class="circ-title">Proroga del termine di versamento del <em>secondo acconto IRPEF</em> e relative imposte sostitutive</span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2022</div>
+      <div class="circ-list">
+        <div class="circ-note">Aggiornamenti fiscali e normativi</div>
+
+        <a class="circ-item" href="https://www.emvas.it/dl-29-12-2022-n-198-c-d-milleproroghe/" target="_blank" rel="noopener">
+          <span class="circ-ref">DL 29.12.2022</span>
+          <span class="circ-title">DL 29.12.2022 n. 198 — Decreto <em>"Milleproroghe"</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/bilancio-2022-e-determinazione-dellires-e-dellirap/" target="_blank" rel="noopener">
+          <span class="circ-ref">2022</span>
+          <span class="circ-title">Bilancio 2022 e determinazione dell'<em>IRES e dell'IRAP</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/legge-di-bilancio-2022-principali-novita/" target="_blank" rel="noopener">
+          <span class="circ-ref">L. 234/2021</span>
+          <span class="circ-title">Legge di Bilancio 2022 — <em>principali novità</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/nuove-imprese-a-tasso-zero-2022/" target="_blank" rel="noopener">
+          <span class="circ-ref">2022</span>
+          <span class="circ-title">Nuove imprese a <em>tasso zero 2022</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2021</div>
+      <div class="circ-list">
+        <div class="circ-note">Circolari di studio e per la clientela</div>
+
+        <a class="circ-item" href="https://www.emvas.it/72429-2/" target="_blank" rel="noopener">
+          <span class="circ-ref">Studio n. 01/2021</span>
+          <span class="circ-title">Uscita del Regno Unito dall'Unione Europea <em>(Brexit)</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/estensione-dellobbligo-di-green-pass-a-tutti-i-lavoratori-del-settore-privato/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Estensione dell'obbligo di <em>"Green Pass"</em> a tutti i lavoratori del settore privato</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/certificazione-unica-2021/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Certificazione Unica <em>2021</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/sanzioni-2021-per-mancata-memorizzazione-e-trasmissione-dei-corrispettivi-telematici/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Sanzioni 2021 per mancata memorizzazione e trasmissione dei <em>corrispettivi telematici</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/richiesta-documentazione-per-i-modelli-redditi-2021/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Richiesta documentazione per i <em>modelli Redditi 2021</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/informativa-sulle-erogazioni-pubbliche/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Informativa sulle <em>erogazioni pubbliche</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/bilancio-2020-e-determinazione-dellires-e-dellirap/" target="_blank" rel="noopener">
+          <span class="circ-ref">2021</span>
+          <span class="circ-title">Bilancio 2020 e determinazione dell'<em>IRES e dell'IRAP</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2020</div>
+      <div class="circ-list">
+        <div class="circ-note">Circolari per la clientela</div>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-67-2020-legge-di-bilancio-2021/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 67/2020</span>
+          <span class="circ-title">Legge di Bilancio <em>2021</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-64-2020-il-regime-fiscale-degli-omaggi/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 64/2020</span>
+          <span class="circ-title">Il regime fiscale degli <em>omaggi</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-62-2020-nuova-imu-versamento-della-seconda-rata-entro-il-16-12-2020/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 62/2020</span>
+          <span class="circ-title">"Nuova" IMU — versamento della seconda rata entro il <em>16.12.2020</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-61-2020-proroga-del-termine-di-versamento-della-seconda-o-unica-rata-proroga-del-termine-di-presentazione-dei-modelli-redditi-e-irap-2020/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 61/2020</span>
+          <span class="circ-title">Proroga del termine di versamento della seconda o unica rata — proroga modelli <em>Redditi e IRAP 2020</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-60-2020-obbligo-di-tracciabilita-per-gli-oneri-detraibili-al-19-novita-per-la-comunicazione-dei-dati-relativi-alle-spese-sanitarie-e-veterinarie/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 60/2020</span>
+          <span class="circ-title">Obbligo di "tracciabilità" per gli <em>oneri detraibili al 19%</em> — spese sanitarie e veterinarie</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-59-2020-credito-dimposta-sui-canoni-di-locazione-di-immobili-ad-uso-non-abitativo-novita-dei-dl-ristori-ristori-bis-e/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 59/2020</span>
+          <span class="circ-title">Credito d'imposta sui <em>canoni di locazione</em> di immobili ad uso non abitativo — DL "Ristori", "Ristori-bis" e "Ristori-ter"</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-56-2020-decreto-ristori-bis-altre-principali-novita/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 56/2020</span>
+          <span class="circ-title">Decreto <em>"Ristori-bis"</em> — altre principali novità</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-52-2020-modelli-770-2020/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 52/2020</span>
+          <span class="circ-title">Modelli <em>770/2020</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-per-la-clientela-n-44-2020-regime-speciale-iva-settore-agricolo/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 44/2020</span>
+          <span class="circ-title">Regime speciale IVA <em>settore agricolo</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/corrispettivi-telematici-circolare-per-la-clientela-n-38-2020/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 38/2020</span>
+          <span class="circ-title">Corrispettivi <em>telematici</em> — novità dei DL "Cura Italia" e "Rilancio"</span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/nuova-disciplina-versamento-ritenute-chiarimenti-ade-circolare-per-la-clientela-n-05-2020/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 05/2020</span>
+          <span class="circ-title">Nuova disciplina <em>versamento ritenute</em> — chiarimenti Agenzia delle Entrate</span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2019</div>
+      <div class="circ-list">
+        <div class="circ-note">Circolari di studio e per la clientela</div>
+
+        <a class="circ-item" href="https://www.emvas.it/prova-delle-cessioni-intracomunitarie-circolare-per-la-clientela-n-56-2019/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 56/2019</span>
+          <span class="circ-title">Prova delle <em>cessioni intracomunitarie</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/voucher-manager-circolare-per-la-clientela-n-48-2019/" target="_blank" rel="noopener">
+          <span class="circ-ref">Clientela n. 48/2019</span>
+          <span class="circ-title">Voucher <em>Manager</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/circolare-di-studio-n-42-2019/" target="_blank" rel="noopener">
+          <span class="circ-ref">Studio n. 42/2019</span>
+          <span class="circ-title">Patent Box — determinazione diretta in <em>dichiarazione</em></span>
+          <span class="circ-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="circ-year">
+      <div class="circ-year-label">2016</div>
+      <div class="circ-list">
+        <div class="circ-note">Archivio storico (PDF)</div>
+
+        <a class="circ-item" href="https://www.emvas.it/wp-content/uploads/circolari/16.circolare-di-studio-di-venerd-9-settembre-2016.pdf" target="_blank" rel="noopener">
+          <span class="circ-ref">Studio n. 16/2016</span>
+          <span class="circ-title">Circolare di studio di <em>venerdì 9 settembre 2016</em></span>
+          <span class="circ-arrow">PDF →</span>
+        </a>
+
+        <a class="circ-item" href="https://www.emvas.it/wp-content/uploads/circolari/8.circolare-di-studio-di-marted-10-maggio-2016.pdf" target="_blank" rel="noopener">
+          <span class="circ-ref">Studio n. 08/2016</span>
+          <span class="circ-title">Circolare di studio di <em>martedì 10 maggio 2016</em> — periodo 16-31 maggio</span>
+          <span class="circ-arrow">PDF →</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div style="border: 1px dashed var(--rule); padding: 48px 40px; text-align: center; background: var(--paper-deep); max-width: 1200px; margin: 0 auto;">
+    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;">Newsletter</div>
+    <h2 style="font-size: clamp(26px, 3vw, 36px); margin-bottom: 14px;">Vuoi ricevere le <em>nostre circolari</em>?</h2>
+    <p style="color: var(--muted); max-width: 60ch; margin: 0 auto 24px;">Iscriviti alla newsletter per ricevere aggiornamenti, scadenze e approfondimenti direttamente nella tua casella.</p>
+    <a href="../contattaci.html" class="cta-btn" style="display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none;">Contattaci →</a>
   </div>
 </section>
 
